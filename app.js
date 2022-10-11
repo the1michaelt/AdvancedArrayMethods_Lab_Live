@@ -130,8 +130,8 @@ function filterExample(){
     return results;
 }
 
-let mexicanFood = filterExample();
-console.log('mexicanFood from filterExample', mexicanFood)
+// let mexicanFood = filterExample();
+// console.log('mexicanFood from filterExample', mexicanFood)
 
 
 
@@ -154,8 +154,8 @@ function problemOne(){
 
     return results;
 }
-let vegetarianFood = problemOne();
-console.log('vegetarian from filterExample', vegetarianFood)
+// let vegetarianFood = problemOne();
+// console.log('vegetarian from filterExample', vegetarianFood)
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
@@ -176,8 +176,8 @@ function problemTwo() {
 
     return results;
 }
-let chosenFood = problemTwo();
-console.log(`User's choice of cuisine type from filterExample`, chosenFood)
+// let chosenFood = problemTwo();
+// console.log(`User's choice of cuisine type from filterExample`, chosenFood)
 
 
 
@@ -199,13 +199,30 @@ function problemThree() {
 
     return results;
 }
-let italianServings = problemThree();
-console.log(`Cuisine type of "Italian" and a serving size greater than 5.`, italianServings)
+// let italianServings = problemThree();
+// console.log(`Cuisine type of "Italian" and a serving size greater than 5.`, italianServings)
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function problemFour() {
+
+    let results;
+    results = dishes.filter(function (el) {
+        console.log("el inside filterExample's filter: ", el);
+        if (el.id === el.servings) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+let idMatchesServings = problemFour();
+console.log(`Dishes whose id number matches their serving count.`, idMatchesServings)
 
 
 //5. Create a function that will return only dishes whose serving count is even.
