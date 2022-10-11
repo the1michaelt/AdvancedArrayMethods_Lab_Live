@@ -130,8 +130,8 @@ function filterExample(){
     return results;
 }
 
-// let mexicanFood = filterExample();
-// console.log('mexicanFood from filterExample', mexicanFood)
+let mexicanFood = filterExample();
+console.log('mexicanFood from filterExample', mexicanFood)
 
 
 
@@ -154,8 +154,8 @@ function problemOne(){
 
     return results;
 }
-// let vegetarianFood = problemOne();
-// console.log('vegetarian from filterExample', vegetarianFood)
+let vegetarianFood = problemOne();
+console.log('vegetarian from filterExample', vegetarianFood)
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
@@ -176,8 +176,8 @@ function problemTwo() {
 
     return results;
 }
-// let chosenFood = problemTwo();
-// console.log(`User's choice of cuisine type from filterExample`, chosenFood)
+let chosenFood = problemTwo();
+console.log(`User's choice of cuisine type from filterExample`, chosenFood)
 
 
 
@@ -199,8 +199,8 @@ function problemThree() {
 
     return results;
 }
-// let italianServings = problemThree();
-// console.log(`Cuisine type of "Italian" and a serving size greater than 5.`, italianServings)
+let italianServings = problemThree();
+console.log(`Cuisine type of "Italian" and a serving size greater than 5.`, italianServings)
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
@@ -221,8 +221,8 @@ function problemFour() {
 
     return results;
     }
-    // let idMatchesServings = problemFour();
-    // console.log(`Dishes whose id number matches their serving count.`, idMatchesServings)
+    let idMatchesServings = problemFour();
+    console.log(`Dishes whose id number matches their serving count.`, idMatchesServings)
 
 
     //5. Create a function that will return only dishes whose serving count is even.
@@ -243,8 +243,8 @@ function problemFive() {
     return results;
 }
 
-// let evenServingCount = problemFive();
-// console.log(`Dishes whose serving count is even.`, evenServingCount)
+let evenServingCount = problemFive();
+console.log(`Dishes whose serving count is even.`, evenServingCount)
     
 
 
@@ -268,8 +268,8 @@ function problemSix() {
     return results;
 }
 
-// let chickpeaDishes = problemSix();
-// console.log(`Dishes whose ingredients array INCLUDES "chickpea".`, chickpeaDishes)
+let chickpeaDishes = problemSix();
+console.log(`Dishes whose ingredients array INCLUDES "chickpea".`, chickpeaDishes)
 
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
@@ -291,8 +291,8 @@ function problemSeven() {
     return results;
 }
 
-// let ingredientDishes = problemSeven();
-// console.log(`Dishes that include your choice ingredient.`, ingredientDishes)
+let ingredientDishes = problemSeven();
+console.log(`Dishes that include your choice ingredient.`, ingredientDishes)
 
 
 
@@ -307,8 +307,8 @@ function problemEight() {
     return results
 }
 
-// let cuisineTypes = problemEight();
-// console.log(`Array of the string cuisine types.`, cuisineTypes)
+let cuisineTypes = problemEight();
+console.log(`Array of the string cuisine types.`, cuisineTypes)
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
@@ -322,8 +322,8 @@ function problemNine() {
     return results
 }
 
-// let cuisineAndName = problemNine();
-// console.log(`Array of strings, with the cuisine type appended to the start of the dish's name.`, cuisineAndName)
+let cuisineAndName = problemNine();
+console.log(`Array of strings, with the cuisine type appended to the start of the dish's name.`, cuisineAndName)
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
