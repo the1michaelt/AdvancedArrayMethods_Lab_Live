@@ -1,9 +1,9 @@
+"use strict";
+// //The purpose of this Lab is to get a solid understanding of the .filter() and .map() advanced array methods.
+// //These methods will be used extensively on future projects
 
-//The purpose of this Lab is to get a solid understanding of the .filter() and .map() advanced array methods.
-//These methods will be used extensively on future projects
 
-
-//Dataset
+// //Dataset
 let dishes = [
     {
         "id": 1,
@@ -112,153 +112,264 @@ let dishes = [
     },
 ]
 
-//Example function
-//IMPORTANT: Take the time to step through this example function with a breakpoint until you could explain what is going on to someone else before starting this lab.
+// //Example function
+// //IMPORTANT: Take the time to step through this example function with a breakpoint until you could explain what is going on to someone else before starting this lab.
 
-function filterExample(){
-    //Debug tip: Use a console.log(el) inside the filter function to get a visualization of what el represents and see all its properties! This helps you to know what you can access with dot notation inside the filter. Do this every time you use a .filter or else you are working in the dark!
-    let results;
-    results = dishes.filter(function(el){
-        console.log("el inside filterExample's filter: ", el)
-        if(el.cuisine === "Mexican"){
-            return true;
-        }
-        else{
-            return false;
-        }})
+// function filterExample(){
+//     //Debug tip: Use a console.log(el) inside the filter function to get a visualization of what el represents and see all its properties! This helps you to know what you can access with dot notation inside the filter. Do this every time you use a .filter or else you are working in the dark!
+//     let results;
+//     results = dishes.filter(function(el){
+//         console.log("el inside filterExample's filter: ", el)
+//         if(el.cuisine === "Mexican"){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }})
 
-    return results;
-}
+//     return results;
+// }
 
-let mexicanFood = filterExample();
-console.log('mexicanFood from filterExample', mexicanFood)
-
-
-
-//Reminder: Do not move on to problem one until understand the example completely!!
-//1. Create a function that will return all dishes with the cuisine type of "vegetarian"
-//Filter
-
-function problemOne(){
-
-    let results;
-    results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el)
-        if (el.cuisine === "Vegetarian") {
-            return true;
-        }
-        else {
-            return false;
-        }
-    })
-
-    return results;
-}
-let vegetarianFood = problemOne();
-console.log('vegetarian from filterExample', vegetarianFood)
-
-//2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
-//Filter
-
-function problemTwo() {
-
-    let results;
-    let choiceCuisine = prompt('Please choose what type of cuisine you would like: Vegetarian, Italian, French, Irish, Hungarian, Vietnamese, or Mexican');
-    results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el);
-        if (el.cuisine === choiceCuisine) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    })
-
-    return results;
-}
-let chosenFood = problemTwo();
-console.log(`User's choice of cuisine type from filterExample`, chosenFood)
+// let mexicanFood = filterExample();
+// console.log('mexicanFood from filterExample', mexicanFood)
 
 
 
-//3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
-//Filter
+// //Reminder: Do not move on to problem one until understand the example completely!!
+// //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
+// //Filter
 
-function problemThree() {
+// function problemOne(){
 
-    let results;
-    results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el)
-        if (el.cuisine === "Italian" && el.servings > 5) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    })
+//     let results;
+//     results = dishes.filter(function (el) {
+//         console.log("el inside filterExample's filter: ", el)
+//         if (el.cuisine === "Vegetarian") {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
 
-    return results;
-}
-let italianServings = problemThree();
-console.log(`Cuisine type of "Italian" and a serving size greater than 5.`, italianServings)
+//     return results;
+// }
+// let vegetarianFood = problemOne();
+// console.log('vegetarian from filterExample', vegetarianFood)
+
+// //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
+// //Filter
+
+// function problemTwo() {
+
+//     let results;
+//     let choiceCuisine = prompt('Please choose what type of cuisine you would like: Vegetarian, Italian, French, Irish, Hungarian, Vietnamese, or Mexican');
+//     results = dishes.filter(function (el) {
+//         console.log("el inside filterExample's filter: ", el);
+//         if (el.cuisine === choiceCuisine) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
+
+//     return results;
+// }
+// let chosenFood = problemTwo();
+// console.log(`User's choice of cuisine type from filterExample`, chosenFood)
 
 
-//4. Create a function that will return only dishes whose id number matches their serving count.
-//Filter
 
-function problemFour() {
+// //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
+// //Filter
 
-    let results;
-    results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el)
-        if (el.id === el.servings) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    })
+// function problemThree() {
 
-    return results;
-    }
-    let idMatchesServings = problemFour();
-    console.log(`Dishes whose id number matches their serving count.`, idMatchesServings)
+//     let results;
+//     results = dishes.filter(function (el) {
+//         console.log("el inside filterExample's filter: ", el)
+//         if (el.cuisine === "Italian" && el.servings > 5) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
+
+//     return results;
+// }
+// let italianServings = problemThree();
+// console.log(`Cuisine type of "Italian" and a serving size greater than 5.`, italianServings)
 
 
-    //5. Create a function that will return only dishes whose serving count is even.
-    //Filter
+// //4. Create a function that will return only dishes whose id number matches their serving count.
+// //Filter
 
-function problemFive() {
+// function problemFour() {
 
-    let results;
-    results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el)
-        if (el.servings % 2 == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    })
-    return results;
-}
+//     let results;
+//     results = dishes.filter(function (el) {
+//         console.log("el inside filterExample's filter: ", el)
+//         if (el.id === el.servings) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
 
-let evenServingCount = problemFive();
-console.log(`Dishes whose serving count is even.`, evenServingCount)
+//     return results;
+//     }
+//     let idMatchesServings = problemFour();
+//     console.log(`Dishes whose id number matches their serving count.`, idMatchesServings)
+
+
+//     //5. Create a function that will return only dishes whose serving count is even.
+//     //Filter
+
+// function problemFive() {
+
+//     let results;
+//     results = dishes.filter(function (el) {
+//         console.log("el inside filterExample's filter: ", el)
+//         if (el.servings % 2 == 0) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+
+// let evenServingCount = problemFive();
+// console.log(`Dishes whose serving count is even.`, evenServingCount)
     
 
 
-//6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
-//Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
-//Double Hint: Research 'javascript does array include item'  https://www.w3schools.com/Jsref/jsref_includes_array.asp#:~:text=JavaScript%20Array%20includes%20%28%29%201%20Definition%20and%20Usage,2016%29%20is%20supported%20in%20all%20modern%20browsers%3A%20
-//Filter
+// //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
+// //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
+// //Double Hint: Research 'javascript does array include item'  https://www.w3schools.com/Jsref/jsref_includes_array.asp#:~:text=JavaScript%20Array%20includes%20%28%29%201%20Definition%20and%20Usage,2016%29%20is%20supported%20in%20all%20modern%20browsers%3A%20
+// //Filter
 
-function problemSix() {
+// function problemSix() {
+
+//     let results;
+//     results = dishes.filter(function (el) {
+//         console.log("el inside filterExample's filter: ", el)
+//         if (el.ingredients.includes("chickpea")) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+
+// let chickpeaDishes = problemSix();
+// console.log(`Dishes whose ingredients array INCLUDES "chickpea".`, chickpeaDishes)
+
+
+// //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
+// //Filter
+
+// function problemSeven() {
+
+//     let results;
+//     let choiceIngredient = prompt('Please choose what ingredient you would like: Tomato, Chickpea, Cheese, Beef, Parsley, Cabbage, Flour, Sugar, Ginger, or Corn');
+//     results = dishes.filter(function (el) {
+//         console.log("el inside filterExample's filter: ", el)
+//         if (el.ingredients.includes(choiceIngredient)) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+
+// let ingredientDishes = problemSeven();
+// console.log(`Dishes that include your choice ingredient.`, ingredientDishes)
+
+
+
+// //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
+// //Map
+
+// function problemEight() {
+//     let results;
+//     results = dishes.map(function (el) {
+//         return el.cuisine
+//         })
+//     return results
+// }
+
+// let cuisineTypes = problemEight();
+// console.log(`Array of the string cuisine types.`, cuisineTypes)
+
+
+// //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
+// //Map
+
+// function problemNine() {
+//     let results;
+//     results = dishes.map(function (el) {
+//         return [el.cuisine, el.name].join(" ")
+//     }) 
+//     return results
+// }
+
+// let cuisineAndName = problemNine();
+// console.log(`Array of strings, with the cuisine type appended to the start of the dish's name.`, cuisineAndName)
+
+
+// //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
+
+
+// function problemTen() {
+//     let results;
+//     let cuisine = "Vegetarian"
+//     results = dishes.map(function (el) {
+//         return cuisine +" " + el.name
+//     })
+//     return results
+// }
+
+// let vegetarianAndName = problemTen();
+// console.log(`Use advanced array methods on the 'dishes' array and return the result preceeded by "Vegetarian."`, vegetarianAndName)
+
+
+
+// //BONUS
+
+// //8b. Use the filter method to eliminate duplicate from problem 8a.
+
+// function problemEight() {
+//     let results;
+//     results = dishes.map(function (el) {
+//         return el.cuisine
+//     })
+//     return results
+// }
+
+// let cuisineTypes = problemEight();
+// console.log(`Array of the string cuisine types.`, cuisineTypes)
+
+
+
+// //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
+// //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
+// //Filter
+
+function problemEleven() {
 
     let results;
     results = dishes.filter(function (el) {
         console.log("el inside filterExample's filter: ", el)
-        if (el.ingredients.includes("chickpea")) {
+        if (el.ingredients.includes("tomato") || el.ingredients.includes("cheese")) {
             return true;
         }
         else {
@@ -268,88 +379,8 @@ function problemSix() {
     return results;
 }
 
-let chickpeaDishes = problemSix();
-console.log(`Dishes whose ingredients array INCLUDES "chickpea".`, chickpeaDishes)
-
-
-//7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
-//Filter
-
-function problemSeven() {
-
-    let results;
-    let choiceIngredient = prompt('Please choose what ingredient you would like: Tomato, Chickpea, Cheese, Beef, Parsley, Cabbage, Flour, Sugar, Ginger, or Corn');
-    results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el)
-        if (el.ingredients.includes(choiceIngredient)) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    })
-    return results;
-}
-
-let ingredientDishes = problemSeven();
-console.log(`Dishes that include your choice ingredient.`, ingredientDishes)
-
-
-
-//8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
-//Map
-
-function problemEight() {
-    let results;
-    results = dishes.map(function (el) {
-        return el.cuisine
-        })
-    return results
-}
-
-let cuisineTypes = problemEight();
-console.log(`Array of the string cuisine types.`, cuisineTypes)
-
-
-//9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
-//Map
-
-function problemNine() {
-    let results;
-    results = dishes.map(function (el) {
-        return [el.cuisine, el.name].join(" ")
-    }) 
-    return results
-}
-
-let cuisineAndName = problemNine();
-console.log(`Array of strings, with the cuisine type appended to the start of the dish's name.`, cuisineAndName)
-
-
-//10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
-
-
-function problemTen() {
-    let results;
-    let cuisine = "Vegetarian"
-    results = dishes.map(function (el) {
-        return cuisine +" " + el.name
-    })
-    return results
-}
-
-let vegetarianAndName = problemTen();
-console.log(`Use advanced array methods on the 'dishes' array and return the result preceeded by "Vegetarian."`, vegetarianAndName)
-
-
-
-//BONUS
-
-//8b. Use the filter method to eliminate duplicate from problem 8a.
-
-//11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
-//Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
-//Filter
+let tomatoCheese = problemEleven();
+console.log(`Dishes whose ingredients array INCLUDES "tomato" OR "cheese."`, tomatoCheese)
 
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
