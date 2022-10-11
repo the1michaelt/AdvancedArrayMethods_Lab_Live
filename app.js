@@ -130,8 +130,8 @@ function filterExample(){
     return results;
 }
 
-let mexicanFood = filterExample();
-console.log('mexicanFood from filterExample', mexicanFood)
+// let mexicanFood = filterExample();
+// console.log('mexicanFood from filterExample', mexicanFood)
 
 
 
@@ -159,6 +159,25 @@ console.log('vegetarian from filterExample', vegetarianFood)
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
+
+function problemTwo() {
+
+    let results;
+    let choiceCuisine = prompt('Please choose what type of cuisine you would like: Vegetarian, Italian, French, Irish, Hungarian, Vietnamese, or Mexican');
+    results = dishes.filter(function (el) {
+        console.log("el inside filterExample's filter: ", el);
+        if (el.cuisine === choiceCuisine) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+let chosenFood = problemTwo();
+console.log(`User's choice from filterExample`, chosenFood)
 
 
 
