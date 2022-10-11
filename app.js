@@ -307,30 +307,23 @@ function problemEight() {
     return results
 }
 
-let cuisineTypes = problemEight();
-console.log(`Array of the string cuisine types.`, cuisineTypes)
-
-
-//     let results;
-//     results = dishes.map(function (el) {
-//         console.log("el inside filterExample's filter: ", el)
-//         if (el.ingredients.map(choiceIngredient)) {
-//             return true;
-//         }
-//         else {
-//             return false;
-//         }
-//     })
-//     return results;
-// }
-
 // let cuisineTypes = problemEight();
 // console.log(`Array of the string cuisine types.`, cuisineTypes)
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
-//Map 
+//Map
 
+function problemNine() {
+    let results;
+    results = dishes.map(function (el) {
+        return [el.cuisine, el.name].join(" ")
+    }) 
+    return results
+}
+
+let cuisineAndName = problemNine();
+console.log(`Array of strings, with the cuisine type appended to the start of the dish's name.`, cuisineAndName)
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
