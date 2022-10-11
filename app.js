@@ -322,13 +322,24 @@ function problemNine() {
     return results
 }
 
-let cuisineAndName = problemNine();
-console.log(`Array of strings, with the cuisine type appended to the start of the dish's name.`, cuisineAndName)
+// let cuisineAndName = problemNine();
+// console.log(`Array of strings, with the cuisine type appended to the start of the dish's name.`, cuisineAndName)
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
 
+function problemTen() {
+    let results;
+    let cuisine = "Vegetarian"
+    results = dishes.map(function (el) {
+        return cuisine +" " + el.name
+    })
+    return results
+}
+
+let vegetarianAndName = problemTen();
+console.log(`Use advanced array methods on the 'dishes' array and return the result preceeded by "Vegetarian."`, vegetarianAndName)
 
 
 
