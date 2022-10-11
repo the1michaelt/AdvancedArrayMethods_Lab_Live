@@ -188,7 +188,7 @@ function problemThree() {
 
     let results;
     results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el);
+        console.log("el inside filterExample's filter: ", el)
         if (el.cuisine === "Italian" && el.servings > 5) {
             return true;
         }
@@ -210,7 +210,7 @@ function problemFour() {
 
     let results;
     results = dishes.filter(function (el) {
-        console.log("el inside filterExample's filter: ", el);
+        console.log("el inside filterExample's filter: ", el)
         if (el.id === el.servings) {
             return true;
         }
@@ -220,13 +220,32 @@ function problemFour() {
     })
 
     return results;
+    }
+    // let idMatchesServings = problemFour();
+    // console.log(`Dishes whose id number matches their serving count.`, idMatchesServings)
+
+
+    //5. Create a function that will return only dishes whose serving count is even.
+    //Filter
+
+function problemFive() {
+
+    let results;
+    results = dishes.filter(function (el) {
+        console.log("el inside filterExample's filter: ", el)
+        if (el.servings % 2 == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+    return results;
 }
-let idMatchesServings = problemFour();
-console.log(`Dishes whose id number matches their serving count.`, idMatchesServings)
 
-
-//5. Create a function that will return only dishes whose serving count is even.
-//Filter
+let evenServingCount = problemFive();
+console.log(`Dishes whose serving count is even.`, evenServingCount)
+    
 
 
 
