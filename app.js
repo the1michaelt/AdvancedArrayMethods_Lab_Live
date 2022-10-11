@@ -243,21 +243,56 @@ function problemFive() {
     return results;
 }
 
-let evenServingCount = problemFive();
-console.log(`Dishes whose serving count is even.`, evenServingCount)
+// let evenServingCount = problemFive();
+// console.log(`Dishes whose serving count is even.`, evenServingCount)
     
-
 
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
-//Double Hint: Research 'javascript does array include item'
+//Double Hint: Research 'javascript does array include item'  https://www.w3schools.com/Jsref/jsref_includes_array.asp#:~:text=JavaScript%20Array%20includes%20%28%29%201%20Definition%20and%20Usage,2016%29%20is%20supported%20in%20all%20modern%20browsers%3A%20
 //Filter
 
+function problemSix() {
+
+    let results;
+    results = dishes.filter(function (el) {
+        console.log("el inside filterExample's filter: ", el)
+        if (el.ingredients.includes("chickpea")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+    return results;
+}
+
+// let chickpeaDishes = problemSix();
+// console.log(`Dishes whose ingredients array INCLUDES "chickpea".`, chickpeaDishes)
 
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
+
+function problemSeven() {
+
+    let results;
+    let choiceIngredient = prompt('Please choose what ingredient you would like: Tomato, Chickpea, Cheese, Beef, Parsley, Cabbage, Flour, Sugar, Ginger, or Corn');
+    results = dishes.filter(function (el) {
+        console.log("el inside filterExample's filter: ", el)
+        if (el.ingredients.includes(choiceIngredient)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+    return results;
+}
+
+let ingredientDishes = problemSeven();
+console.log(`Dishes that include your choice ingredient.`, ingredientDishes)
 
 
 
