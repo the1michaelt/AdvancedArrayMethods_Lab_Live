@@ -291,14 +291,41 @@ function problemSeven() {
     return results;
 }
 
-let ingredientDishes = problemSeven();
-console.log(`Dishes that include your choice ingredient.`, ingredientDishes)
+// let ingredientDishes = problemSeven();
+// console.log(`Dishes that include your choice ingredient.`, ingredientDishes)
 
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
+function problemEight() {
+    let results;
+    results = dishes.map(function (el) {
+        return el.cuisine
+        })
+    return results
+}
+
+let cuisineTypes = problemEight();
+console.log(`Array of the string cuisine types.`, cuisineTypes)
+
+
+//     let results;
+//     results = dishes.map(function (el) {
+//         console.log("el inside filterExample's filter: ", el)
+//         if (el.ingredients.map(choiceIngredient)) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+
+// let cuisineTypes = problemEight();
+// console.log(`Array of the string cuisine types.`, cuisineTypes)
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
